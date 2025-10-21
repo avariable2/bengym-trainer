@@ -176,3 +176,4 @@ Pour toute modification, les fichiers sont simples à éditer :
 - `script.js` : Interactions
 
 **Le site est prêt à l'emploi !** 🎉
+
