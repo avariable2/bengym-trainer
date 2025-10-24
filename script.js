@@ -36,30 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Formulaire de contact
-const contactForm = document.getElementById('contactForm');
-const successMessage = document.getElementById('successMessage');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Simulation d'envoi
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    console.log('Formulaire soumis:', data);
-    
-    // Afficher le message de succès
-    successMessage.style.display = 'block';
-    
-    // Réinitialiser le formulaire
-    contactForm.reset();
-    
-    // Cacher le message après 5 secondes
-    setTimeout(() => {
-        successMessage.style.display = 'none';
-    }, 5000);
-});
+// Formulaire de contact - géré par FormSubmit
+// Le formulaire est envoyé directement à FormSubmit qui redirigera après envoi
 
 // Smooth scroll pour les liens
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

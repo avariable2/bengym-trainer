@@ -346,7 +346,13 @@
                     <!-- Formulaire -->
                     <div class="form-container animate-on-scroll">
                         <h3>Envoyez-moi un message</h3>
-                        <form id="contactForm">
+                        <form id="contactForm" action="https://formsubmit.co/b.mourolin2@gmail.com" method="POST">
+                            <!-- Configuration FormSubmit -->
+                            <input type="hidden" name="_subject" value="Nouveau message depuis BenGym Trainer">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" style="display:none">
+                            
                             <div class="form-group">
                                 <label for="name">Nom complet *</label>
                                 <input type="text" id="name" name="name" required placeholder="Jean Dupont">
@@ -363,12 +369,12 @@
                                 <label for="goal">Objectif principal *</label>
                                 <select id="goal" name="goal" required>
                                     <option value="">Sélectionnez votre objectif</option>
-                                    <option value="perte">Perte de poids</option>
-                                    <option value="masse">Prise de masse</option>
-                                    <option value="forme">Remise en forme</option>
-                                    <option value="competition">Préparation compétition</option>
-                                    <option value="performance">Amélioration performance</option>
-                                    <option value="autre">Autre</option>
+                                    <option value="Perte de poids">Perte de poids</option>
+                                    <option value="Prise de masse">Prise de masse</option>
+                                    <option value="Remise en forme">Remise en forme</option>
+                                    <option value="Préparation compétition">Préparation compétition</option>
+                                    <option value="Amélioration performance">Amélioration performance</option>
+                                    <option value="Autre">Autre</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -376,9 +382,6 @@
                                 <textarea id="message" name="message" required rows="5" placeholder="Parlez-moi de vos objectifs..."></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-submit">Envoyer le message</button>
-                            <div id="successMessage" class="success-message" style="display: none;">
-                                ✅ Message envoyé avec succès ! Je vous recontacterai dans les 24h.
-                            </div>
                         </form>
                     </div>
 
